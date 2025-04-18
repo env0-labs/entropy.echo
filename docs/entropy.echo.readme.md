@@ -15,3 +15,6 @@ This project emerged conceptually after the split from `node.zero`. While `node.
 
 ---
 Part of the [env0.labs](https://github.com/env0-labs) ecosystem.
+
+> This project is built to unsettle, not to entertain.  
+> If it feels broken, look closer — it might be following instructions you didn’t write.
