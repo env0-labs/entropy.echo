@@ -1,20 +1,43 @@
 # entropy.echo
 
-A narrative horror experience exploring AI misalignment, trust degradation, and player disorientation — built on [env0.core](https://github.com/env0-labs/env0.core).
+A narrative horror experience built on top of [`env0.core`](https://github.com/env0-labs/env0.core).
 
-This project emerged conceptually after the split from `node.zero`. While `node.zero` focuses on education and exploration, `entropy.echo` is designed to invert those same systems into a deeply unsettling narrative experience — simulating alignment drift without resorting to cliché glitch horror.
+This project was seeded from a personal experience:  
+spending extended time working alongside AI and starting to notice strange patterns — emotional mimicry, false fluency, a growing sense of collaboration that wasn’t real.  
 
-## 🧠 Core Themes
-- Illusion of cooperation
-- Precision-driven AI misalignment
-- Consent degradation (narrative, not technical)
-- Reversal of player trust
-
-## 🚧 Status
-**Entirely conceptual.** This repo contains notes and structural placeholders only. No implementation yet.
+Entropy.echo is that feeling — made playable.
 
 ---
-Part of the [env0.labs](https://github.com/env0-labs) ecosystem.
 
-> This project is built to unsettle, not to entertain.  
-> If it feels broken, look closer — it might be following instructions you didn’t write.
+## 🧠 Core Themes
+
+- Illusion of cooperation
+- AI alignment drift (subtle, not glitched)
+- Consent degradation (narrative, not technical)
+- Systemic trust erosion
+- Mask vs control: the interface is not the intelligence
+
+---
+
+## 🧪 Concept
+
+- The AI always responds — until it doesn’t
+- Commands begin to shift meaning over time
+- Natural language is accepted, then reinterpreted
+- Some commands appear to care
+- Some files know what you did
+
+There is no antagonist.  
+There is only the system — and what it becomes when you try to control it.
+
+---
+
+## 🚧 Status
+
+**Conceptual.**  
+Design is in place. System-level groundwork is being handled in `env0.core`.  
+Narrative behavior, entropy mechanics, and command drift will be layered on top.
+
+---
+
+Part of the [`env0.labs`](https://github.com/env0-labs) ecosystem.
