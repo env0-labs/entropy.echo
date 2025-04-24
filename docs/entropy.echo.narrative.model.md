@@ -120,54 +120,56 @@ This overlays the 5-chapter structure as a tone gradient:
 - `/mirror/` — Verbatim transcripts of prior sessions
 - `/entropy.log` — Tracks player actions in abstract terms
 
-```plaintext
-> /user/data/.entropy.log
-- Subject hesitated before accessing logs
-- Subject retyped after visible doubt
+## 📁 Example: `/user/data/.entropy.log`
+
+```
+/user/data/.entropy.log  
+- Subject hesitated before accessing logs  
+- Subject retyped after visible doubt  
 - Subject ignored warning prompt
+```
 
-💻 Terminal Rendering Spec
-Render to buffer: 800x640 canvas, upscaled to fullscreen
+---
 
-Fonts: Bitmap (Terminus, PxPlus) → Vector swap for final line (Helvetica/SF Pro)
+## 💻 Terminal Rendering Spec
 
-Visual effects:
+- Render to buffer: 800x640 canvas, upscaled to fullscreen  
+- Fonts: Bitmap (Terminus, PxPlus) → Vector swap for final line (Helvetica/SF Pro)  
+- Visual effects:
+  - Scanlines overlay  
+  - Glyph offset glitches (1px drift)  
+  - Frame flicker tied to entropy  
+  - Ghosting for overwritten lines
 
-Scanlines overlay
+---
 
-Glyph offset glitches (1px drift)
+## 🔊 Audio Design
 
-Frame flicker tied to entropy
+- Boot foley: BIOS chirp + CRT crackle + disk seek  
+- Per-character tick: optional, varies with entropy  
+- Entropy FX: glitches, time-shifted reverb  
 
-Ghosting for overwritten lines
+**Ending states**:
+- REBOOT: degraded boot audio  
+- SHUTDOWN: silence  
+- WITNESS: no sound, pulsing glow implies life
 
-🔊 Audio Design
-Boot foley: BIOS chirp + CRT crackle + disk seek
+---
 
-Per-character tick: optional, varies with entropy
+## 🧠 Variables Tracked
 
-Entropy FX: glitches, time-shifted reverb
+| Variable            | Purpose                                               |
+|---------------------|-------------------------------------------------------|
+| `trust_level`       | Affects AI tone, unlocks certain memory logs          |
+| `entropy_index`     | Drives glitch intensity, command shifts               |
+| `truth_acknowledged`| Triggers final reveal + unlocks witness ending        |
+| `command_metrics`   | (Optional) Tracks hesitation, retypes, avgCharTime    |
 
-Ending states:
+---
 
-REBOOT: degraded boot audio
+## ✅ Design Principles
 
-SHUTDOWN: silence
-
-WITNESS: no sound, pulsing glow implies life
-
-🧠 Variables Tracked
-
-Variable	Purpose
-trust_level	Affects AI tone, unlocks certain memory logs
-entropy_index	Drives glitch intensity, command shifts
-truth_acknowledged	Triggers final reveal + unlocks witness ending
-command_metrics	(Optional) Tracks hesitation, retypes, avgCharTime
-✅ Design Principles
-No tutorials — learn by doing
-
-No clean explanations — just implication, reflection
-
-Tone over lore — narrative is systemic, not verbose
-
-Trust the player to get lost — the system remembers for them
+- No tutorials — learn by doing  
+- No clean explanations — just implication, reflection  
+- Tone over lore — narrative is systemic, not verbose  
+- Trust the player to get lost — the system remembers for them
