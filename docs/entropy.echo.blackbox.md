@@ -32,6 +32,8 @@
 
 ## 🧠 Horror Game LLM Integration Concept
 
+Ignore below. Decision taken to not persue the LLM insertion idea on this game and approach the game with old school lookup tables. With enough logic it could act much like AI.
+
 - Use a local, lightweight LLM (e.g. GPT-J, Mistral 7B, TinyLlama) to simulate an assistant degrading over time
 - Model choice prioritizes fragility over intelligence — subtle hallucinations and token unpredictability are a feature
 - LLM should run locally as part of the game payload (e.g. via `llama.cpp` or `ollama`)
