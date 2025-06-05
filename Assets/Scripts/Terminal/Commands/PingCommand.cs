@@ -16,27 +16,28 @@ namespace Env0.Terminal
                 return result;
             }
 
-            if (args.Length == 0 || string.IsNullOrWhiteSpace(args[0]))
+            // Optional: parse count from args (e.g., "ping -c 2 host")
+            var packetCount = 4;
+            var argIndex = 0;
+            if (args.Length > 1 && args[0] == "-c" && int.TryParse(args[1], out var c))
+            {
+                packetCount = c;
+                argIndex = 2;
+            }
+
+            if (args.Length <= argIndex || string.IsNullOrWhiteSpace(args[argIndex]))
             {
                 result.AddLine("ping: Missing hostname or IP.\n", OutputType.Error);
                 return result;
             }
 
-            var target = args[0].Trim();
+            var target = args[argIndex].Trim();
             var device = session.NetworkManager.FindDevice(target);
 
             if (device == null)
             {
                 result.AddLine($"ping: {target}: Host unreachable\n", OutputType.Error);
                 return result;
-            }
-
-            // Optional: parse count from args (e.g., "ping -c 2 host")
-            var packetCount = 4;
-            if (args.Length > 2 && args[0] == "-c" && int.TryParse(args[1], out var c))
-            {
-                packetCount = c;
-                target = args[2];
             }
 
             var results = session.NetworkManager.Ping(device, packetCount);
